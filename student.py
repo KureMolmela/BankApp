@@ -17,5 +17,15 @@ class StudentAccount(User):
             print("Amount exceeds limit")
 
 student = StudentAccount()
-student.deposit(1000)
-student.withdraw(1000)
+one = int(input("Select 1 for Withdraw or 2 for Deposit: "))
+
+if one == 1:
+    print("Withdrawal")
+    amount = int(input("Enter Amount: "))
+    student.withdraw(amount)
+elif one == 2:
+    print("Deposit")
+    amount = int(input("Enter Amount: "))
+    student.deposit(amount)
+else:
+    print("Option Not Available")

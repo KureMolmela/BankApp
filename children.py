@@ -8,5 +8,8 @@ class ChildrenAccount(User):
 
 
 children = ChildrenAccount()
-children.get_interest_rate(1000)
-children.withdraw(1000)
+# customer deposits
+amount = int(input("How much do you want to deposit: "))
+children.deposit(amount)
+children.get_interest_rate(amount)
+children.totalTwo()

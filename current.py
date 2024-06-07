@@ -5,6 +5,15 @@ class CurrentAccount(User):
         User.__init__(self)
 
 current = CurrentAccount()
-# amount = int(input("withdraw: "))
-current.withdraw()
-current.deposit()
+print("Press 1 to withdraw and 2 to deposit ")
+one = int(input("Enter: "))
+
+if one == 1:
+    amount = int(input("Enter Amount: "))
+    current.withdraw(amount)
+elif one == 2:
+    amount = int(input("Enter Amount: "))
+    current.deposit(amount)
+else:
+    print("Thank you for Banking with us!")
+
